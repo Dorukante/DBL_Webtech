@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<title>The Data Set</title>
+<head>
+  <script src="https://underscorejs.org/underscore-esm.js"></script>
+  <style>
+    th {cursor: pointer;}
+  </style>
+</head>
+<h1 style="text-align:center; font-size: 300%; color: #000;"> Data Set of the Enron </h1>
+<table class="table table-dark table-hover">
+  <thead>
+    <tr>
+      <th onclick="groupcol(this)">date</th>
+      <th onclick="groupcol(this)">fromId</th>
+      <th onclick="groupcol(this)">fromEmail</th>
+      <th onclick="groupcol(this)">fromJobTitle </th>
+      <th onclick="groupcol(this)">toId</th>
+      <th onclick="groupcol(this)">toEmail</th>
+      <th onclick="groupcol(this)">toJobtitle</th>
+      <th onclick="groupcol(this)">messageType</th>
+      <th onclick="groupcol(this)">sentiment</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for value in myData%}
+    <tr>
+      <td>{{ value[0] }}</td>
+      <td>{{ value[1] }}</td> 
+      <td>{{ value[2] }}</td>
+      <td>{{ value[3] }}</td> 
+      <td>{{ value[4] }}</td>
+      <td>{{ value[5] }}</td> 
+      <td>{{ value[6] }}</td>
+      <td>{{ value[7] }}</td> 
+      <td>{{ value[8] }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+ </table>
+ <script>
+ 
+ </script>
+   
